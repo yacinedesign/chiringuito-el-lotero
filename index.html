@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chiringuito El Lotero · Espetos, pescaíto y arroces en Fuengirola · Carta sin gluten</title>
+<meta name="description" content="Chiringuito en el Paseo Marítimo Rey de España de Fuengirola (El Carvajal). Espetos, pescaíto frito, marisco y arroces, con una carta 100 % sin gluten. Abierto todos los días de 12:30 a 22:30.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Restaurant",
+  "name":"Chiringuito El Lotero","servesCuisine":["Mediterránea","Pescado","Marisco","Sin gluten"],
+  "telephone":"+34644495911","priceRange":"€€",
+  "address":{"@type":"PostalAddress","streetAddress":"Paseo Marítimo Rey de España, 147","postalCode":"29640","addressLocality":"Fuengirola","addressRegion":"Málaga","addressCountry":"ES"},
+  "geo":{"@type":"GeoCoordinates","latitude":36.5689022,"longitude":-4.5938329},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:30","closes":"22:30"}],
+  "acceptsReservations":"True",
+  "sameAs":["https://www.instagram.com/chiringuitoellotero/","https://www.facebook.com/chiringuitoellotero/"]
+}
+</script>
+<style>
+:root{
+  --sand:#F3E7D3; --sand-2:#EADAC0; --cream:#FFFAF2; --sea:#0D4A66; --sea-2:#0A3A51; --sky:#9CCADB;
+  --red:#D4473A; --red-2:#B9382C; --ink:#13303F; --muted:#5B6E78;
+  --line:rgba(19,48,63,.14);
+  --serif:"Young Serif",Georgia,serif; --sans:"Instrument Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--ink);background:var(--cream);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(34px,4.4vw,56px)}
+h2 .r,h1 .r{color:var(--red)}
+.tag{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+.lead{font-size:clamp(17px,1.4vw,19px);color:var(--muted);max-width:560px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:600;font-size:15.5px;transition:background .3s,transform .3s,color .3s,border-color .3s;white-space:nowrap}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-2);transform:translateY(-1px)}
+.btn-white{background:var(--cream);color:var(--sea)}
+.btn-white:hover{background:#fff}
+.btn-line{border:1.5px solid currentColor}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-sea{background:var(--sea);color:#fff}
+.btn-sea:hover{background:var(--sea-2)}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;color:#fff;transition:color .3s}
+header::before{content:"";position:absolute;inset:0;background:rgba(255,250,242,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;transition:opacity .3s;z-index:-1;box-shadow:0 1px 0 var(--line)}
+header.scrolled{color:var(--ink)}
+header.scrolled::before{opacity:1}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo svg{width:44px;height:44px}
+.logo b{display:block;font-family:var(--serif);font-weight:400;font-size:25px;line-height:1}
+.logo small{display:block;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;opacity:.8;margin-top:3px}
+.menu{display:flex;align-items:center;gap:26px;font-size:15px;font-weight:500}
+.menu a:not(.btn):hover{opacity:.7}
+.lang{display:flex;border:1px solid currentColor;border-radius:999px;padding:3px;font-size:12px;font-weight:700;letter-spacing:.06em;opacity:.95}
+.lang button{padding:5px 10px;border-radius:999px}
+.lang button.on{background:var(--red);color:#fff}
+.burger{display:none;width:44px;height:44px;align-items:center;justify-content:center}
+.burger span,.burger span::before,.burger span::after{display:block;width:22px;height:2px;background:currentColor;position:relative;transition:transform .3s,background .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+.open .burger span{background:transparent}
+.open .burger span::before{transform:translateY(7px) rotate(45deg)}
+.open .burger span::after{transform:translateY(-7px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;min-height:min(860px,100vh);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--sea)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,58,81,.55) 0%,rgba(10,58,81,0) 70%),linear-gradient(180deg,rgba(10,58,81,.55) 0%,rgba(10,58,81,.15) 35%,rgba(10,58,81,.85) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-top:140px;padding-bottom:70px;width:100%}
+.gf{display:inline-flex;align-items:center;gap:9px;background:var(--cream);color:var(--sea);padding:9px 16px 9px 10px;border-radius:999px;font-weight:700;font-size:14px;margin-bottom:24px}
+.gf i{width:28px;height:28px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:12px;font-weight:700}
+.hero h1{font-size:clamp(46px,7vw,96px);max-width:900px;margin-bottom:22px}
+.hero h1 .r{color:#FFB4A8}
+.hero p{font-size:clamp(17px,1.5vw,20px);max-width:600px;opacity:.92;margin-bottom:32px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.facts{position:relative;z-index:2;background:var(--sand)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.fact{padding:24px 22px;border-right:1px solid var(--line);display:flex;gap:14px;align-items:center}
+.fact:last-child{border-right:0}
+.fact svg{width:28px;height:28px;color:var(--red);flex:none}
+.fact b{display:block;font-size:15.5px}
+.fact span{font-size:14px;color:var(--muted)}
+
+/* wave */
+.wave{display:block;width:100%;height:46px}
+
+/* story */
+section{padding:110px 0}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.story h2{margin:14px 0 20px}
+.story p+p{margin-top:14px}
+.story .pics{position:relative;height:540px}
+.story .pics .a{position:absolute;left:0;top:0;width:72%;height:78%;border-radius:22px;overflow:hidden}
+.story .pics .b{position:absolute;right:0;bottom:0;width:52%;height:52%;border-radius:22px;overflow:hidden;border:8px solid var(--cream)}
+.story .pics img{width:100%;height:100%;object-fit:cover}
+.stamp{position:absolute;right:6%;top:6%;width:130px;height:130px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--serif);font-size:17px;line-height:1.15;padding:14px;transform:rotate(-8deg)}
+.checks{list-style:none;margin-top:26px;display:grid;gap:10px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks svg{width:22px;height:22px;color:var(--red);flex:none;margin-top:2px}
+
+/* gluten */
+.gluten{background:var(--sea);color:#fff;position:relative;overflow:hidden}
+.gluten .tag{color:#FFB4A8}
+.g-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.gluten h2{margin:14px 0 20px}
+.gluten .lead{color:rgba(255,255,255,.8)}
+.g-quotes{display:grid;gap:16px}
+.g-quotes blockquote{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:24px 26px}
+.g-quotes p{font-family:var(--serif);font-size:21px;line-height:1.35}
+.g-quotes cite{display:block;margin-top:10px;font-style:normal;font-size:13.5px;color:var(--sky);font-weight:600;letter-spacing:.04em}
+.big-sg{font-family:var(--serif);font-size:clamp(90px,12vw,170px);line-height:.9;color:var(--sky);opacity:.95}
+
+/* carta */
+.carta{background:var(--sand)}
+.c-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:46px}
+.c-head h2{margin-top:12px;max-width:640px}
+.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.dish{background:var(--cream);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.dish .ph{aspect-ratio:4/3;overflow:hidden}
+.dish .ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s}
+.dish:hover .ph img{transform:scale(1.05)}
+.dish .bd{padding:22px 22px 24px}
+.dish h3{font-size:24px;margin-bottom:12px}
+.dish ul{list-style:none}
+.dish li{padding:8px 0;border-bottom:1px dashed var(--line);font-size:15.5px}
+.dish li:last-child{border-bottom:0}
+.c-note{margin-top:26px;font-size:14.5px;color:var(--muted);text-align:center}
+
+/* reserve */
+.reserve-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:50px;align-items:center}
+.reserve h2{margin:14px 0 18px}
+.form{background:var(--sand);border-radius:26px;padding:34px}
+.form h3{font-size:26px;margin-bottom:6px}
+.form>p{color:var(--muted);font-size:15px;margin-bottom:22px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;letter-spacing:.04em}
+.form input,.form select{border:1px solid var(--line);background:var(--cream);border-radius:12px;padding:13px 14px;font-size:16px;width:100%}
+.form input:focus,.form select:focus{outline:2px solid var(--sky);border-color:var(--sea)}
+.form .full{grid-column:1/-1}
+.form .btn{width:100%;margin-top:18px}
+.form small{display:block;margin-top:12px;font-size:12.5px;color:var(--muted);text-align:center}
+
+/* reviews */
+.reviews{background:var(--cream)}
+.rv-head{text-align:center;max-width:720px;margin:0 auto 50px}
+.rv-head h2{margin-top:12px}
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rv-card{border:1px solid var(--line);border-radius:22px;padding:28px 26px;background:#fff;display:flex;flex-direction:column;gap:16px}
+.rv-card .st{color:#E8A23A;letter-spacing:3px;font-size:15px}
+.rv-card p{font-size:16.5px}
+.rv-card footer{margin-top:auto;font-weight:600;font-size:14px;display:flex;justify-content:space-between}
+.rv-card footer span{font-weight:400;color:var(--muted)}
+
+/* visit */
+.visit{background:var(--sand)}
+.v-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:26px}
+.v-info{background:var(--cream);border-radius:26px;padding:40px}
+.v-info h2{font-size:clamp(32px,3.4vw,44px);margin:12px 0 12px}
+.v-info .addr{color:var(--muted);margin-bottom:20px}
+.status{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;padding:8px 14px;border-radius:999px;background:var(--sand);margin-bottom:22px}
+.status i{width:9px;height:9px;border-radius:50%;background:#B7AFA3}
+.status.on i{background:#2E9E6B;box-shadow:0 0 0 4px rgba(46,158,107,.18)}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin-bottom:26px}
+.hours td{padding:8px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{font-weight:700;color:var(--ink)}
+.vbtns{display:flex;flex-wrap:wrap;gap:10px}
+.vbtns .btn-line{color:var(--sea)}
+.vbtns .btn-line:hover{background:var(--sand)}
+.map{border-radius:26px;overflow:hidden;min-height:480px;background:var(--sky)}
+.map iframe{width:100%;height:100%;min-height:480px;border:0;display:block}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 46px 22px 0;font-family:var(--serif);font-size:22px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:20px;transition:transform .3s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{padding:0 46px 22px 0;color:var(--muted)}
+
+footer.site{background:var(--sea-2);color:rgba(255,255,255,.75);padding:60px 0 30px;font-size:14.5px}
+footer.site .logo{color:#fff}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px}
+.f-grid h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:12px}
+.f-grid p,.f-grid a{display:block;margin-bottom:6px}
+.f-grid a:hover{color:#fff}
+.f-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:13px}
+
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.35);transition:transform .3s}
+.wa:hover{transform:scale(1.06)}
+.wa svg{width:30px;height:30px}
+
+.rv-in{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv-in.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){.rv-in{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1020px){
+  .story-grid,.g-grid,.reserve-grid,.v-grid,.faq-grid{grid-template-columns:1fr}
+  .menu-grid{grid-template-columns:1fr 1fr}
+  .facts .wrap{grid-template-columns:1fr 1fr}
+  .fact:nth-child(2){border-right:0}
+  .fact:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .rv-grid{grid-template-columns:1fr 1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .story .pics{height:460px;max-width:600px}
+  .big-sg{display:none}
+}
+@media (max-width:860px){
+  .menu{position:fixed;inset:78px 0 auto 0;background:var(--cream);color:var(--ink);flex-direction:column;align-items:flex-start;gap:0;padding:8px 24px 26px;border-bottom:1px solid var(--line);opacity:0;visibility:hidden;transform:translateY(-10px);transition:.3s}
+  .open .menu{opacity:1;visibility:visible;transform:none}
+  .menu a:not(.btn){width:100%;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
+  .menu .btn{margin-top:18px}
+  .menu .lang{display:none}
+  .burger{display:flex}
+  .nav-r{display:flex;align-items:center;gap:8px}
+  .open{color:var(--ink)}
+  .open::before{opacity:1!important}
+}
+@media (min-width:861px){.nav-r .lang{display:none}}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .logo small{letter-spacing:.12em;white-space:nowrap}
+  .logo b{font-size:22px}
+  section{padding:80px 0}
+  .hero .wrap{padding-bottom:50px}
+  .facts .wrap{grid-template-columns:1fr;padding:0}
+  .fact{border-right:0;border-bottom:1px solid var(--line);padding:18px 20px}
+  .fact:last-child{border-bottom:0}
+  .menu-grid,.rv-grid{grid-template-columns:1fr}
+  .story .pics{height:380px}
+  .stamp{width:104px;height:104px;font-size:14px}
+  .fgrid{grid-template-columns:1fr}
+  .form{padding:26px 20px}
+  .v-info{padding:28px 22px}
+  .map,.map iframe{min-height:320px}
+  .f-grid{grid-template-columns:1fr}
+  .btn{padding:14px 20px}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Chiringuito El Lotero">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 40 42 8"/><path d="M14 26c3-5 9-8 15-8 2 0 3.5.4 5 1l-4 3 4 3c-1.5.6-3 1-5 1-6 0-12-1-15 0Z"/><circle cx="17.5" cy="25" r=".9" fill="currentColor"/></svg>
+      <span><b>El Lotero</b><small>Chiringuito · Fuengirola</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#casa" data-en="The place">La casa</a>
+      <a href="#sin-gluten" data-en="Gluten free">Sin gluten</a>
+      <a href="#carta" data-en="Menu">Carta</a>
+      <a href="#opiniones" data-en="Reviews">Opiniones</a>
+      <a href="#donde" data-en="Find us">Dónde estamos</a>
+      <div class="lang" role="group" aria-label="Idioma"><button data-lang="es" class="on">ES</button><button data-lang="en">EN</button></div>
+      <a href="#reservar" class="btn btn-red" data-en="Book a table">Reservar mesa</a>
+    </nav>
+    <div class="nav-r">
+      <div class="lang" role="group" aria-label="Idioma"><button data-lang="es" class="on">ES</button><button data-lang="en">EN</button></div>
+      <button class="burger" id="burger" aria-label="Menú" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding:0">
+  <img src="https://images.unsplash.com/photo-1654092319728-420e138fdaa4?auto=format&fit=crop&w=2000&q=80" alt="Espetos de sardinas asándose en la barca" fetchpriority="high">
+  <div class="wrap">
+    <span class="gf rv-in"><i>SG</i><span data-en="100% gluten-free menu">Carta 100 % sin gluten</span></span>
+    <h1 class="rv-in d1" data-en="Sardine skewers, fried fish and rice dishes <span class='r'>right on the sea</span>.">Espetos, pescaíto y arroces <span class="r">frente al mar</span>.</h1>
+    <p class="rv-in d2" data-en="A traditional beach bar on Fuengirola’s seafront, in El Carvajal. Come for lunch, stay for the afternoon and leave already thinking about the next espeto.">Un chiringuito con tradición en el paseo marítimo de Fuengirola, en El Carvajal. Ven a comer, quédate la tarde y vete pensando ya en el próximo espeto.</p>
+    <div class="ctas rv-in d3">
+      <a href="#reservar" class="btn btn-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-en="Book a table">Reservar mesa</span></a>
+      <a href="tel:+34644495911" class="btn btn-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>644 49 59 11</a>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap">
+    <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b data-en="Open every day">Abierto todos los días</b><span>12:30 – 22:30</span></div></div>
+    <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b data-en="On the beach">En primera línea</b><span>P.º Marítimo Rey de España, 147</span></div></div>
+    <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20h18M5 20c0-6 3-10 7-10s7 4 7 10"/><path d="M12 10V4"/></svg><div><b data-en="Terrace, indoors &amp; sunbeds">Terraza, interior y hamacas</b><span data-en="Table on the sand on request">Mesa en la arena, bajo petición</span></div></div>
+    <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M7 7c2 1 3 3 5 3s3-2 5-3M7 12c2 1 3 3 5 3s3-2 5-3"/><path d="m4 4 16 16"/></svg><div><b data-en="Coeliac-friendly">Apto para celíacos</b><span data-en="Gluten-free bread on request">Pan sin gluten si lo pides</span></div></div>
+  </div>
+</div>
+
+<section class="story" id="casa">
+  <div class="wrap story-grid">
+    <div class="pics rv-in">
+      <div class="a"><img loading="lazy" src="https://images.unsplash.com/photo-1791449810880-789a5aa7b186?auto=format&fit=crop&w=1000&q=75" alt="Terraza de chiringuito frente al mar"></div>
+      <div class="b"><img loading="lazy" src="https://images.unsplash.com/photo-1785567773155-c673cf8297ec?auto=format&fit=crop&w=700&q=75" alt="Plato de sardinas asadas con ensalada"></div>
+      <div class="stamp" data-en="Since forever in El Carvajal">De toda la vida en El Carvajal</div>
+    </div>
+    <div>
+      <span class="tag rv-in" data-en="The place">La casa</span>
+      <h2 class="rv-in d1" data-en="A beach bar <span class='r'>the way they used to be</span>.">Un chiringuito <span class="r">como los de antes</span>.</h2>
+      <p class="lead rv-in d2" data-en="Sardines on the skewer, fried fish Málaga-style and seafood are our trademarks. Everything served fast, in a relaxed, family atmosphere, with the Mediterranean right in front of you.">Los espetos, el pescaíto frito y el marisco son nuestras señas de identidad. Todo servido rápido, en un ambiente familiar y tranquilo, con el Mediterráneo delante.</p>
+      <ul class="checks rv-in d3">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span data-en="Fresh produce and generous portions to share.">Género fresco y raciones generosas para compartir.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span data-en="Terrace, indoor dining room and sunbeds on the beach with table service.">Terraza, comedor interior y hamacas en la playa con servicio.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span data-en="Open every day, for a long lunch or a dinner by the sea.">Abierto todos los días, para una comida larga o una cena junto al mar.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="gluten" id="sin-gluten">
+  <div class="wrap g-grid">
+    <div>
+      <span class="tag rv-in" data-en="Our difference">Nuestra diferencia</span>
+      <h2 class="rv-in d1" data-en="The whole menu, <span class='r' style='color:#FFB4A8'>gluten-free</span>.">Toda la carta, <span class="r" style="color:#FFB4A8">sin gluten</span>.</h2>
+      <p class="lead rv-in d2" data-en="Fried fish without the worry. Our menu is 100% gluten-free, so coeliacs can order anything they fancy, just like everyone else at the table. Ask for gluten-free bread when you sit down.">Pescaíto frito sin preocupaciones. Nuestra carta es 100 % sin gluten, así que las personas celíacas pueden pedir lo que les apetezca, como el resto de la mesa. Pide pan sin gluten al sentarte.</p>
+      <div class="big-sg rv-in d3">100%</div>
+    </div>
+    <div class="g-quotes">
+      <blockquote class="rv-in"><p data-en="“The menu is 100% gluten-free, so the peace of mind is wonderful.”">«La carta es 100 % sin gluten, así que la tranquilidad es una maravilla.»</p><cite>Malva N. · Google</cite></blockquote>
+      <blockquote class="rv-in d1"><p data-en="“I’ve gone with coeliac friends and honestly you can’t tell the difference.”">«He ido acompañando a amigos celíacos y sinceramente no se nota la diferencia.»</p><cite>María José R. · Google</cite></blockquote>
+      <blockquote class="rv-in d2"><p data-en="“They cater for you if you’re coeliac. I loved it, I’ll be back for sure.”">«Te sirven si eres celíaco, me ha encantado. Volveré sin duda.»</p><cite>IMBO · Google</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="carta" id="carta">
+  <div class="wrap">
+    <div class="c-head">
+      <div>
+        <span class="tag rv-in" data-en="Menu">Carta</span>
+        <h2 class="rv-in d1" data-en="What everyone <span class='r'>orders</span>.">Lo que <span class="r">todo el mundo pide</span>.</h2>
+      </div>
+      <p class="lead rv-in d2" data-en="A taste of our menu. Everything gluten-free, everything designed for sharing.">Una muestra de nuestra carta. Todo sin gluten, todo pensado para compartir.</p>
+    </div>
+    <div class="menu-grid">
+      <article class="dish rv-in"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1711941339153-642d90869a21?auto=format&fit=crop&w=700&q=75" alt="Espetos de sardinas en la brasa"></div><div class="bd"><h3 data-en="Skewers &amp; fried fish">Espetos y fritura</h3><ul>
+        <li data-en="Sardine skewer">Espeto de sardinas</li><li data-en="Málaga-style fried fish platter">Fritura malagueña</li><li data-en="Fresh anchovies">Boquerones</li><li data-en="Baby squid">Calamaritos</li></ul></div></article>
+      <article class="dish rv-in d1"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1630175860333-5131bda75071?auto=format&fit=crop&w=700&q=75" alt="Paella marinera"></div><div class="bd"><h3 data-en="Rice dishes">Arroces</h3><ul>
+        <li data-en="Seafood paella">Paella marinera</li><li data-en="Mixed paella">Paella mixta</li><li data-en="Black rice">Arroz negro</li><li data-en="Soupy rice">Arroz caldoso</li></ul></div></article>
+      <article class="dish rv-in d2"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1724279840151-be7bc472bc4d?auto=format&fit=crop&w=700&q=75" alt="Gambas frescas"></div><div class="bd"><h3 data-en="From the sea">Del mar</h3><ul>
+        <li data-en="Sea bass">Lubina</li><li data-en="Grilled prawns">Gambas a la plancha</li><li data-en="Garlic prawns">Gambas al ajillo</li><li data-en="Clams">Almejas</li><li data-en="Galician-style octopus">Pulpo a la gallega</li></ul></div></article>
+      <article class="dish rv-in d3"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1682264895449-f75b342cbab6?auto=format&fit=crop&w=700&q=75" alt="Calamares fritos"></div><div class="bd"><h3 data-en="Salads &amp; desserts">Ensaladas y postres</h3><ul>
+        <li data-en="House salad">Ensalada de la casa</li><li data-en="Avocado salad">Ensalada de aguacate</li><li data-en="Green salad">Ensalada verde</li><li data-en="Egg flan">Flan de huevo</li></ul></div></article>
+    </div>
+    <p class="c-note rv-in" data-en="The menu may change with the season. Ask our team what’s best today.">La carta puede variar según la temporada. Pregunta al equipo qué está mejor hoy.</p>
+  </div>
+</section>
+
+<section class="reserve" id="reservar">
+  <div class="wrap reserve-grid">
+    <div>
+      <span class="tag rv-in" data-en="Bookings">Reservas</span>
+      <h2 class="rv-in d1" data-en="Better <span class='r'>with a booking</span>.">Mejor <span class="r">con reserva</span>.</h2>
+      <p class="lead rv-in d2" data-en="Weekends, holidays and summer fill up fast, and sometimes even winter does. Fill in the details and we’ll get your request on WhatsApp.">Los fines de semana, los festivos y el verano se llenan rápido, y a veces hasta en invierno. Rellena los datos y nos llega tu petición por WhatsApp.</p>
+      <div class="rv-in d3" style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="tel:+34644495911" class="btn btn-sea" data-en="Prefer to call? 644 49 59 11">¿Prefieres llamar? 644 49 59 11</a>
+      </div>
+    </div>
+    <form class="form rv-in" id="bookForm" novalidate>
+      <h3 data-en="Book your table">Reserva tu mesa</h3>
+      <p data-en="We’ll confirm your booking as soon as possible.">Te confirmamos la reserva lo antes posible.</p>
+      <div class="fgrid">
+        <label><span data-en="Name">Nombre</span><input type="text" id="fName" autocomplete="name"></label>
+        <label><span data-en="People">Personas</span><select id="fPax"><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option value="9+">9+</option></select></label>
+        <label><span data-en="Date">Fecha</span><input type="date" id="fDate"></label>
+        <label><span data-en="Time">Hora</span><select id="fTime"><option>13:00</option><option>13:30</option><option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option></select></label>
+        <label class="full"><span data-en="Where">Dónde</span><select id="fZone"><option value="terraza" data-en="Terrace">Terraza</option><option value="interior" data-en="Indoors">Interior</option><option value="arena" data-en="On the sand">En la arena</option><option value="igual" data-en="No preference">Me da igual</option></select></label>
+      </div>
+      <button class="btn btn-red" type="submit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg><span data-en="Send request on WhatsApp">Enviar petición por WhatsApp</span></button>
+      <small data-en="Your booking is confirmed when we reply.">La reserva queda confirmada cuando te respondamos.</small>
+    </form>
+  </div>
+</section>
+
+<section class="reviews" id="opiniones" style="padding-top:0">
+  <div class="wrap">
+    <div class="rv-head">
+      <span class="tag rv-in" data-en="Reviews">Opiniones</span>
+      <h2 class="rv-in d1" data-en="More than <span class='r'>4,000 reviews</span> on Google.">Más de <span class="r">4.000 opiniones</span> en Google.</h2>
+    </div>
+    <div class="rv-grid">
+      <article class="rv-card rv-in"><div class="st">★★★★★</div><p data-en="“Excellent raw ingredients, fresh, quality produce. Very professional service.”">«Buenísima materia prima, un género fresco y de calidad. Un servicio muy profesional.»</p><footer>Rosa M. <span>Google</span></footer></article>
+      <article class="rv-card rv-in d1"><div class="st">★★★★★</div><p data-en="“An exquisite soupy rice and the Málaga fried fish just right.”">«Un arroz caldoso exquisito y la fritura malagueña en su punto.»</p><footer>Mpc <span>Google</span></footer></article>
+      <article class="rv-card rv-in d2"><div class="st">★★★★★</div><p data-en="“The food was amazing, especially the espetos, and it arrived super fast.”">«La comida buenísima, sobre todo los espetos, y llegaba súper rápido.»</p><footer>Javier <span>Google</span></footer></article>
+      <article class="rv-card rv-in"><div class="st">★★★★★</div><p data-en="“A classic beach bar, very well looked after. All the waiters were very friendly.”">«Clásico chiringuito de playa muy bien atendido. Todos los camareros muy amables.»</p><footer>Fernando C. <span>Google</span></footer></article>
+      <article class="rv-card rv-in d1"><div class="st">★★★★★</div><p data-en="“The views and the atmosphere are unbeatable, especially on the terrace.”">«Las vistas y el ambiente son inmejorables, sobre todo si te sientas en la terraza.»</p><footer>Boris I. <span>Google</span></footer></article>
+      <article class="rv-card rv-in d2"><div class="st">★★★★★</div><p data-en="“Very attentive and kind, especially the sunbed attendant. A 10/10 place.”">«Muy atento, amable y con un buen trato el chico de las tumbonas. 10/10 el lugar.»</p><footer>Javier <span>Google</span></footer></article>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="donde">
+  <div class="wrap v-grid">
+    <div class="v-info rv-in">
+      <span class="tag" data-en="Find us">Dónde estamos</span>
+      <h2 data-en="El Carvajal beach, <span class='r'>Fuengirola</span>.">Playa de El Carvajal, <span class="r">Fuengirola</span>.</h2>
+      <p class="addr">Paseo Marítimo Rey de España, 147 · 29640 Fuengirola (Málaga)</p>
+      <div class="status" id="status"><i></i><span id="nowTxt">—</span></div>
+      <table class="hours" id="hours"></table>
+      <div class="vbtns">
+        <a href="#reservar" class="btn btn-red" data-en="Book a table">Reservar mesa</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Chiringuito+El+Lotero+Fuengirola" target="_blank" rel="noopener" class="btn btn-line" data-en="Directions">Cómo llegar</a>
+      </div>
+    </div>
+    <div class="map rv-in d1"><iframe loading="lazy" title="Mapa Chiringuito El Lotero" src="https://maps.google.com/maps?q=Chiringuito%20El%20Lotero%2C%20Paseo%20Mar%C3%ADtimo%20Rey%20de%20Espa%C3%B1a%20147%2C%20Fuengirola&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap faq-grid">
+    <div>
+      <span class="tag rv-in" data-en="FAQ">Preguntas frecuentes</span>
+      <h2 class="rv-in d1" style="margin-top:12px" data-en="Before <span class='r'>you come</span>.">Antes de <span class="r">venir</span>.</h2>
+    </div>
+    <div class="faq">
+      <details class="rv-in"><summary data-en="Is really the whole menu gluten-free?">¿De verdad toda la carta es sin gluten?</summary><p data-en="Yes. The whole menu is gluten-free, so coeliacs can order freely. Ask for gluten-free bread when you sit down.">Sí. Toda la carta es sin gluten, así que las personas celíacas pueden pedir con tranquilidad. Pide pan sin gluten al sentarte.</p></details>
+      <details class="rv-in"><summary data-en="Do I need to book?">¿Hace falta reservar?</summary><p data-en="We recommend it, especially at weekends, on holidays and in summer. Use the form above or call 644 49 59 11.">Te lo recomendamos, sobre todo en fines de semana, festivos y verano. Usa el formulario de arriba o llama al 644 49 59 11.</p></details>
+      <details class="rv-in"><summary data-en="Can I eat on the sand?">¿Puedo comer en la arena?</summary><p data-en="Yes, ask for a table on the sand when you book. We also have a terrace and an indoor dining room.">Sí, pide mesa en la arena al reservar. También tenemos terraza y comedor interior.</p></details>
+      <details class="rv-in"><summary data-en="Do you have sunbeds?">¿Tenéis hamacas?</summary><p data-en="Yes, we have sunbeds on the beach with service, perfect to stay after lunch.">Sí, tenemos hamacas en la playa con servicio, perfectas para quedarte después de comer.</p></details>
+      <details class="rv-in"><summary data-en="What are your opening hours?">¿Qué horario tenéis?</summary><p data-en="We open every day from 12:30 to 22:30.">Abrimos todos los días de 12:30 a 22:30.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a href="#top" class="logo" aria-label="Chiringuito El Lotero"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 40 42 8"/><path d="M14 26c3-5 9-8 15-8 2 0 3.5.4 5 1l-4 3 4 3c-1.5.6-3 1-5 1-6 0-12-1-15 0Z"/><circle cx="17.5" cy="25" r=".9" fill="currentColor"/></svg><span><b>El Lotero</b><small>Chiringuito · Fuengirola</small></span></a>
+        <p style="margin-top:16px;max-width:300px" data-en="Sardine skewers, fried fish, seafood and rice dishes, with a 100% gluten-free menu.">Espetos, pescaíto, marisco y arroces, con una carta 100 % sin gluten.</p>
+      </div>
+      <div><h4 data-en="Address">Dirección</h4><p>P.º Marítimo Rey de España, 147</p><p>29640 Fuengirola (Málaga)</p></div>
+      <div><h4 data-en="Bookings">Reservas</h4><a href="tel:+34644495911">644 49 59 11</a><a href="#reservar">WhatsApp</a><p data-en="Every day 12:30–22:30">Todos los días 12:30–22:30</p></div>
+      <div><h4 data-en="Follow us">Síguenos</h4><a href="https://www.instagram.com/chiringuitoellotero/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/chiringuitoellotero/" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+    <div class="f-bot"><span>© <span id="yr">2026</span> Chiringuito El Lotero</span><span data-en="Web design: Mystic">Diseño web: Mystic</span></div>
+  </div>
+</footer>
+
+<a href="#" class="wa js-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg></a>
+
+<script>
+(function(){
+  var LANG='es',PHONE='34644495911',OPEN=[12.5,22.5];
+  var DAYS={es:['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],en:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']};
+  var T={
+    es:{open:'Abierto ahora · hasta las 22:30',closedLater:'Cerrado · abre a las 12:30',closedTom:'Cerrado · abre mañana a las 12:30',gen:'Hola, me gustaría reservar una mesa en El Lotero.',zones:{terraza:'terraza',interior:'interior',arena:'en la arena',igual:'sin preferencia'},
+      book:function(n,p,d,h,z){return 'Hola, me gustaría reservar en El Lotero:\n• Nombre: '+(n||'-')+'\n• Personas: '+p+'\n• Fecha: '+(d||'-')+'\n• Hora: '+h+'\n• Zona: '+z+'\n¡Gracias!'}},
+    en:{open:'Open now · until 22:30',closedLater:'Closed · opens at 12:30',closedTom:'Closed · opens tomorrow at 12:30',gen:'Hi, I would like to book a table at El Lotero.',zones:{terraza:'terrace',interior:'indoors',arena:'on the sand',igual:'no preference'},
+      book:function(n,p,d,h,z){return 'Hi, I would like to book a table at El Lotero:\n• Name: '+(n||'-')+'\n• People: '+p+'\n• Date: '+(d||'-')+'\n• Time: '+h+'\n• Area: '+z+'\nThank you!'}}
+  };
+  function now(){
+    try{var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Madrid',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()),o={};
+      p.forEach(function(x){o[x.type]=x.value});
+      return {d:{Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday],h:parseInt(o.hour,10)%24+parseInt(o.minute,10)/60};
+    }catch(e){var n=new Date();return {d:n.getDay(),h:n.getHours()+n.getMinutes()/60}}
+  }
+  function render(){
+    var n=now(),t=T[LANG],on=n.h>=OPEN[0]&&n.h<OPEN[1];
+    document.getElementById('nowTxt').textContent=on?t.open:(n.h<OPEN[0]?t.closedLater:t.closedTom);
+    document.getElementById('status').classList.toggle('on',on);
+    var html='';[1,2,3,4,5,6,0].forEach(function(d){html+='<tr'+(d===n.d?' class="today"':'')+'><td>'+DAYS[LANG][d]+'</td><td>12:30 – 22:30</td></tr>'});
+    document.getElementById('hours').innerHTML=html;
+  }
+  // idioma
+  var tr=document.querySelectorAll('[data-en]');
+  tr.forEach(function(el){el.setAttribute('data-es',el.innerHTML)});
+  function setLang(l){
+    LANG=l;document.documentElement.lang=l;
+    tr.forEach(function(el){el.innerHTML=el.getAttribute('data-'+l)});
+    document.querySelectorAll('.lang button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-lang')===l)});
+    try{localStorage.setItem('lotero-lang',l)}catch(e){}
+    render();
+  }
+  var saved=null;try{saved=localStorage.getItem('lotero-lang')}catch(e){}
+  setLang(saved||((navigator.language||'es').toLowerCase().indexOf('en')===0?'en':'es'));
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-lang'))})});
+
+  // fecha mínima = hoy
+  try{var d=new Date(),iso=new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);document.getElementById('fDate').min=iso;}catch(e){}
+
+  function openWa(msg){window.open('https://wa.me/'+PHONE+'?text='+encodeURIComponent(msg),'_blank','noopener')}
+  document.getElementById('bookForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var t=T[LANG],dv=document.getElementById('fDate').value,df='';
+    if(dv){var p=dv.split('-');df=p[2]+'/'+p[1]+'/'+p[0];}
+    openWa(t.book(document.getElementById('fName').value.trim(),document.getElementById('fPax').value,df,document.getElementById('fTime').value,t.zones[document.getElementById('fZone').value]));
+  });
+  document.addEventListener('click',function(e){var a=e.target.closest('.js-wa');if(!a)return;e.preventDefault();openWa(T[LANG].gen)});
+
+  // menú
+  var header=document.getElementById('top'),burger=document.getElementById('burger');
+  function closeMenu(){header.classList.remove('open');burger.setAttribute('aria-expanded','false')}
+  burger.addEventListener('click',function(){var o=header.classList.toggle('open');burger.setAttribute('aria-expanded',o?'true':'false')});
+  document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',closeMenu)});
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>40)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var els=document.querySelectorAll('.rv-in');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  setInterval(render,60000);
+})();
+</script>
+</body>
+</html>
